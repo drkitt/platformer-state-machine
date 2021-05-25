@@ -12,7 +12,7 @@ By the way, the character in the example uses the cutout animation style, so thi
 
 ## How do I run the example?
 
-Just clone the repository, [download Godot](https://godotengine.org) if you haven't already, open up the `project.godot` file, and you're good to go!
+Just clone the repository, [download Godot](https://godotengine.org), open up the `project.godot` file in the editor, and you're good to go! The controls for the demo are arrow keys to move and space bar to jump.
 
 ## Authors and Acknowledgements
 
