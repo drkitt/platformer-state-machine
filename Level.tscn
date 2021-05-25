@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 781.745, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 329.793 )
+
+[node name="Root" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -370.287, 11.1779 )
+scale = Vector2( 0.431, 0.431 )
+top_speed = 725.0
+time_to_top_speed = 0.5
+time_to_stop = 0.25
+time_to_apex = 0.5
+jump_height = 250.0
+time_to_ground = 0.45
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -0.345352, -216.725 )
+current = true
+zoom = Vector2( 1.5, 1.5 )
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
+position = Vector2( 1, 0 )
+
+[node name="Floor" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2( -1.31042, 16.508 )
+shape = SubResource( 1 )
+
+[node name="LeftWall" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2( -778.834, -314.946 )
+shape = SubResource( 2 )
+
+[node name="RightWall" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2( 775.47, -305.737 )
+shape = SubResource( 2 )
